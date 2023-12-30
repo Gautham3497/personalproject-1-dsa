@@ -1,0 +1,43 @@
+.text-animation {
+  animation: color 5s infinite;
+}
+@keyframes color {
+  0% {
+    color: rgb(227, 163, 227);
+  }
+  10% {
+    color: rgb(205, 21, 205);
+  }
+  30% {
+    color: rgb(227, 163, 227);
+  }
+  40% {
+    color: rgb(205, 21, 205);
+  }
+  50% {
+    color: rgb(227, 163, 227);
+  }
+  60% {
+    color: rgb(205, 21, 205);
+  }
+  70% {
+    color: rgb(227, 163, 227);
+  }
+  80% {
+    color: rgb(205, 21, 205);
+  }
+
+  70% {
+    color: rgb(227, 163, 227);
+  }
+  80% {
+    color: rgb(205, 21, 205);
+  }
+
+  90% {
+    color: rgb(227, 163, 227);
+  }
+  100% {
+    color: rgb(205, 21, 205);
+  }
+}
