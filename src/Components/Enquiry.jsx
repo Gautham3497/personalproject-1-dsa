@@ -23,8 +23,7 @@ const Enquiry = () => {
           </div>
           <div className="mb-3 flex flex-col">
             <label htmlFor="num" className="font-semibold">
-              {" "}
-              Mobile Number{" "}
+              Mobile Number
             </label>
             <input
               type="tel"
@@ -36,7 +35,6 @@ const Enquiry = () => {
           </div>
           <div className="mb-3 flex flex-col">
             <label htmlFor="mail" className="font-semibold">
-              {" "}
               Email Id
             </label>
             <input
@@ -49,7 +47,6 @@ const Enquiry = () => {
           </div>
           <div className="mb-3 flex flex-col">
             <label htmlFor="city" className="font-semibold">
-              {" "}
               City
             </label>
             <input
@@ -62,7 +59,6 @@ const Enquiry = () => {
           </div>
           <div className="mb-3 flex flex-col">
             <label htmlFor="pin" className="font-semibold">
-              {" "}
               Pin Code
             </label>
             <input
@@ -75,7 +71,6 @@ const Enquiry = () => {
           </div>
           <div className="mb-3 flex flex-col">
             <label htmlFor="emp type" className="font-semibold">
-              {" "}
               Employment Type
             </label>
             <select
@@ -92,7 +87,6 @@ const Enquiry = () => {
           </div>
           <div className="mb-3 flex flex-col">
             <label htmlFor="address" className="font-semibold">
-              {" "}
               Your Address :
             </label>
             <textarea
