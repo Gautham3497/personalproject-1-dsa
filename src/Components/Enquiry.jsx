@@ -42,7 +42,7 @@ const Enquiry = () => {
                 type="text"
                 name="user_name"
                 id="name"
-                className=" w-1/2 rounded border p-2 uppercase focus:outline-none focus:ring focus:ring-purple-500"
+                className=" w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
                 placeholder=" Full Name"
                 required
               />
@@ -58,6 +58,7 @@ const Enquiry = () => {
                 className="w-1/2 rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
                 placeholder="10 Digit Number"
                 required
+                maxLength={10}
               />
             </div>
             <div className="mb-3 flex flex-col">
@@ -68,8 +69,8 @@ const Enquiry = () => {
                 type="email"
                 name="user_email"
                 id="mail"
-                className="w-1/2 rounded border p-2 lowercase focus:outline-none focus:ring focus:ring-purple-500"
-                placeholder="Email"
+                className="w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
+                placeholder="Email Id"
                 required
               />
             </div>
@@ -81,7 +82,7 @@ const Enquiry = () => {
                 type="text"
                 name="user_cityname"
                 id="city"
-                className="w-1/2 rounded border p-2 uppercase focus:outline-none focus:ring focus:ring-purple-500"
+                className="w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
                 placeholder="City Name"
                 required
               />
@@ -95,7 +96,8 @@ const Enquiry = () => {
                 name="user_pincode"
                 id="pin"
                 className="w-1/2 rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
-                placeholder=" Pin Code"
+                placeholder=" Pincode"
+                maxLength={6}
                 required
               />
             </div>
@@ -124,7 +126,7 @@ const Enquiry = () => {
                 id="address"
                 cols="20"
                 rows="5"
-                className="w-8/12 rounded  p-3 uppercase focus:outline-none focus:ring focus:ring-purple-500"
+                className="w-8/12 rounded  p-3  focus:outline-none focus:ring focus:ring-purple-500"
                 placeholder="Contact Address"
                 required
               ></textarea>
