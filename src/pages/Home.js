@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import stock from "../Assets/Stock-Img.jpg";
-import loan from "../Assets/Loan-Img.avif";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import stock from "../assets/Stock-Img.jpg";
+import loan from "../assets/Loan-Img.avif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
@@ -14,6 +16,7 @@ import {
   faPaste,
   faHandHoldingDollar,
 } from "@fortawesome/free-solid-svg-icons";
+// import Enquiry_Form from "./Enquiry_Form";
 
 const Home = () => {
   return (
@@ -57,10 +60,7 @@ const Home = () => {
                   <li>Home Renovation</li>
                   <li>Home Extension</li>
                 </ul>
-                <a
-                  href="#"
-                  className="text-gray-400 underline group-hover:text-green-300"
-                >
+                <a className="text-gray-400 underline group-hover:text-green-300">
                   Read more
                 </a>
               </div>
@@ -75,10 +75,7 @@ const Home = () => {
                   <li className="">LAP for Construction</li>
                   <li>LAP Purchase</li>
                 </ul>
-                <a
-                  href="#"
-                  className="text-gray-400 underline group-hover:text-green-300"
-                >
+                <a className="text-gray-400 underline group-hover:text-green-300">
                   Read more
                 </a>
               </div>

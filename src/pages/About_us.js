@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import person from "../Assets/Person.jpg";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import person from "../assets/Person.jpg";
 
 const About_us = () => {
   return (
@@ -9,7 +9,7 @@ const About_us = () => {
       <section>
         <Navbar />
         <div className="bg-cyan-300">
-          <p className="  container mx-auto  text-center text-4xl leading-loose tracking-wide ">
+          <p className="  container  mx-auto  text-center text-4xl leading-loose tracking-wide ">
             For almost 2 years now, we’ve been provinding the Best Financial
             Solutions to our Clients.
           </p>

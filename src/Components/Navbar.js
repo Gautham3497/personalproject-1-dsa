@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-lone-blocks */
-import React from "react";
+// import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+// import emailjs from "@emailjs/browser";
+import { colors } from "../constants/colors";
 
 const Navbar = () => {
   const toggleMenu = () => {
@@ -13,6 +15,27 @@ const Navbar = () => {
       menu.classList.add("hidden");
     }
   };
+  // const form = useRef();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_qlg3roy",
+  //       "template_4eaqnun",
+  //       form.current,
+  //       "rdd5jVCHkgsR0vRu3",
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       },
+  //     );
+  //   e.target.reset();
+  // };
   return (
     <>
       <nav className="sticky top-0 z-50 border-b-2 bg-slate-300">
@@ -113,8 +136,130 @@ const Navbar = () => {
                   Carrers
                 </a>
               </li>
-              <li className="ml-2 inline-block rounded border border-black bg-green-100 px-4 py-2 hover:bg-green-400 hover:text-white   ">
-                <Link to="/Enquiry">Enquiry</Link>
+              <li
+                style={{ color: colors.gradientOne }}
+                className="group relative ml-2 inline-block rounded border border-black bg-green-100 px-4 py-2 hover:bg-green-400 hover:text-white   "
+              >
+                <Link to="/enquiry-form">Enquiry</Link>
+
+                {/* <ul className="absolute hidden h-screen w-96 -translate-x-72 translate-y-3 animate-sliding-up  overflow-scroll  bg-purple-300 group-hover:block">
+                  <form
+                    action=""
+                    ref={form}
+                    onSubmit={sendEmail}
+                    className="p-3"
+                  >
+                    <div className="mb-1 flex flex-col">
+                      <label htmlFor="name" className="font-semibold">
+                        Your Name
+                      </label>
+                      <input
+                        type="text"
+                        name="user_name"
+                        id="name"
+                        className=" w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
+                        placeholder=" Full Name"
+                        required
+                      />
+                    </div>
+                    <div className="mb-1 flex flex-col">
+                      <label htmlFor="num" className="font-semibold">
+                        Mobile Number
+                      </label>
+                      <input
+                        type="tel"
+                        name="user_number"
+                        id="num"
+                        className="w-1/2 rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
+                        placeholder="10 Digit Number"
+                        required
+                        maxLength={10}
+                      />
+                    </div>
+                    <div className="mb-1 flex flex-col">
+                      <label htmlFor="mail" className="font-semibold">
+                        Email Id
+                      </label>
+                      <input
+                        type="email"
+                        name="user_email"
+                        id="mail"
+                        className="w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
+                        placeholder="Email Id"
+                        required
+                      />
+                    </div>
+                    <div className="mb-1 flex flex-col">
+                      <label htmlFor="city" className="font-semibold">
+                        City
+                      </label>
+                      <input
+                        type="text"
+                        name="user_cityname"
+                        id="city"
+                        className="w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
+                        placeholder="City Name"
+                        required
+                      />
+                    </div>
+                    <div className="mb-1 flex flex-col">
+                      <label htmlFor="pin" className="font-semibold">
+                        Pin Code
+                      </label>
+                      <input
+                        type="text"
+                        name="user_pincode"
+                        id="pin"
+                        className="w-1/2 rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
+                        placeholder=" Pincode"
+                        maxLength={6}
+                        required
+                      />
+                    </div>
+                    <div className="mb-1 flex flex-col">
+                      <label htmlFor="emp type" className="font-semibold">
+                        Employment Type
+                      </label>
+                      <select
+                        name="user_emType"
+                        id="emp type"
+                        className="rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
+                      >
+                        <option
+                          value="Select Employment Type"
+                          selected
+                          required
+                        >
+                          Select Employment Type
+                        </option>
+                        <option value="Salaried">Salaried</option>
+                        <option value="Self-Employee">Self-Employed</option>
+                      </select>
+                    </div>
+                    <div className="mb-1 flex flex-col">
+                      <label htmlFor="address" className="font-semibold">
+                        Your Address :
+                      </label>
+                      <textarea
+                        name="user_address"
+                        id="address"
+                        cols="20"
+                        rows="5"
+                        className="w-8/12 rounded  p-3  focus:outline-none focus:ring focus:ring-purple-500"
+                        placeholder="Contact Address"
+                        required
+                      ></textarea>
+                    </div>
+                    <div>
+                      <button
+                        type="submit"
+                        className=" rounded-md border bg-purple-700 p-2 font-semibold text-white hover:bg-purple-500 focus:outline-none focus:ring focus:ring-purple-500"
+                      >
+                        Request to Contact
+                      </button>
+                    </div>
+                  </form>
+                </ul> */}
               </li>
             </ul>
           </div>

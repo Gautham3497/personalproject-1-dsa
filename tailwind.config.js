@@ -2,7 +2,21 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        "sliding-up": "slide-up 2s ease-in-out",
+      },
+      keyframes: {
+        "slide-up": {
+          "0%": {
+            transform: "translate-y-96",
+          },
+          "100%": {
+            transform: "translate-y-0",
+          },
+        },
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss")],
 };
