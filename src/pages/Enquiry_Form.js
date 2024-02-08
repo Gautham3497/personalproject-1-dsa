@@ -2,6 +2,14 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { colors } from "../constants/colors";
 import logo from "../assets/2.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faYoutube,
+  faXTwitter,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 import emailjs from "@emailjs/browser";
 
@@ -32,16 +40,51 @@ const Enquiry_Form = () => {
 
   return (
     <div style={{ backgroundColor: colors.logoPink }}>
-      <section className="container mx-auto  p-5   md:flex md:p-10 ">
-        <div className=" text-center md:w-1/2 md:text-left ">
-          <Link to="/">
-            <img src={logo} className="  inline h-32 w-32" alt="logo" />
-            <span className="inline text-lg text-white md:block lg:text-4xl">
-              {para}
-            </span>
+      <section className="container mx-auto  gap-4 p-4 md:flex  lg:py-14 ">
+        <div className="  text-center  md:w-1/2 md:text-left">
+          <Link to="/" className="flex justify-center md:block">
+            <img
+              src={logo}
+              className=" h-24 w-24  lg:h-28 lg:w-28  "
+              alt="logo"
+            />
           </Link>
+
+          <p className="font-mono text-lg text-white lg:text-4xl">{para}</p>
+          <div className="lg:mt-[520px]">
+            <Link>
+              <FontAwesomeIcon
+                className="h-6 w-6 p-4 text-white lg:h-10 lg:w-10 "
+                icon={faInstagram}
+              />
+            </Link>
+            <Link>
+              <FontAwesomeIcon
+                className="h-6 w-6 p-4 text-white lg:h-10 lg:w-10 "
+                icon={faWhatsapp}
+              />
+            </Link>
+            <Link>
+              <FontAwesomeIcon
+                className="h-6 w-6 p-4 text-white lg:h-10 lg:w-10 "
+                icon={faFacebook}
+              />
+            </Link>
+            <Link>
+              <FontAwesomeIcon
+                className="h-6 w-6 p-4 text-white lg:h-10 lg:w-10 "
+                icon={faYoutube}
+              />
+            </Link>
+            <Link>
+              <FontAwesomeIcon
+                className="h-6 w-6 p-4 text-white lg:h-10 lg:w-10 "
+                icon={faXTwitter}
+              />
+            </Link>
+          </div>
         </div>
-        <div className=" flex flex-col rounded-xl  bg-white  p-5  md:w-1/2">
+        <div className="  flex flex-col  rounded-3xl  bg-white p-10  md:w-1/2">
           <form action="" ref={form} onSubmit={sendEmail}>
             <div className="flex flex-col">
               <label
@@ -54,7 +97,7 @@ const Enquiry_Form = () => {
                 type="text"
                 name="user_name"
                 id="name"
-                className="mb-2 w-1/2 rounded border-b border-[#F27D2E] bg-transparent p-2 text-lg outline-none focus:border-none  focus:ring focus:ring-[#F27D2E] lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder=" Full Name"
                 required
               />
@@ -70,9 +113,10 @@ const Enquiry_Form = () => {
                 type="tel"
                 name="user_number"
                 id="num"
-                className="mb-2 w-1/2 rounded border-b border-[#F27D2E] bg-transparent p-2 text-lg outline-none focus:border-none  focus:ring focus:ring-[#F27D2E] lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder="10 Digit Number"
                 required
+                minLength={10}
                 maxLength={10}
               />
             </div>
@@ -87,7 +131,7 @@ const Enquiry_Form = () => {
                 type="email"
                 name="user_email"
                 id="mail"
-                className="mb-2 w-1/2 rounded border-b border-[#F27D2E] bg-transparent p-2 text-lg outline-none focus:border-none  focus:ring focus:ring-[#F27D2E] lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder="Email Id"
                 required
               />
@@ -104,7 +148,7 @@ const Enquiry_Form = () => {
                 type="text"
                 name="user_pincode"
                 id="pin"
-                className=" mb-2 w-1/2 rounded border-b border-[#F27D2E] bg-transparent p-2 text-lg outline-none focus:border-none  focus:ring focus:ring-[#F27D2E] lg:text-xl"
+                className=" mb-2 w-11/12  rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder=" Pincode"
                 maxLength={6}
                 required
@@ -112,7 +156,7 @@ const Enquiry_Form = () => {
             </div>
             <div className="mb-3 flex flex-col">
               <label
-                htmlFor="emp type"
+                htmlFor="user-loan-type"
                 className="mb-1 text-lg font-semibold  text-[#2B75BC] md:text-xl"
               >
                 Enquiry Type
@@ -120,7 +164,7 @@ const Enquiry_Form = () => {
               <select
                 name="loan-type"
                 id="user-loan-type"
-                className="mb-2 w-1/2 rounded border-b border-[#F27D2E] bg-transparent p-2 text-lg outline-none focus:border-none  focus:ring focus:ring-[#F27D2E] lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:text-black focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
               >
                 <option value=" Select Loan type" selected required>
                   Select Loan type
@@ -144,7 +188,7 @@ const Enquiry_Form = () => {
                 id="address"
                 cols="20"
                 rows="5"
-                className=" mb-2 w-11/12 rounded border border-[#F27D2E] bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#F27D2E] md:w-8/12 lg:text-xl"
+                className=" mb-3 w-11/12 rounded-lg border border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder="Contact Address"
                 required
               ></textarea>
@@ -153,8 +197,7 @@ const Enquiry_Form = () => {
               <button
                 // style={{ backgroundColor: colors.logoBlue }}
                 type="submit"
-                className=" rounded-md border bg-[#2B75BC] p-2 text-xl font-semibold text-white
-ring-1 hover:bg-[#F27D2E] hover:ring-1 hover:ring-[#F27D2E]"
+                className=" overflow-hidden rounded-full border border-[#2B75BC] px-4 py-2 text-lg   text-[#2B75BC] transition-all  duration-500 hover:border-white hover:bg-[#EF2670]  hover:text-white hover:ring-[#EF2670] md:px-7 md:py-3 md:text-xl"
               >
                 Request to Contact
               </button>

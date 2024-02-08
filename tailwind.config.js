@@ -16,6 +16,9 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        specialFont: "Protest Guerrilla",
+      },
     },
   },
   plugins: [require("tailwindcss")],
