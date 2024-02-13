@@ -1,0 +1,15 @@
+{
+  "editor.fontFamily": "Kanit,Consolas,'Counter New',monospace",
+  "prettier.bracketSameLine": true,
+  "editor.letterSpacing": 2,
+  "terminal.integrated.letterSpacing": 1,
+  "prettier.singleQuote": true,
+  "prettier.useTabs": true,
+  "prettier.jsxSingleQuote": true,
+  "editor.defaultFoldingRangeProvider": "esbenp.prettier-vscode",
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.wrappingStrategy": "simple",
+  "editor.wordWrap": "on"
+}

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import person from "../assets/Person.jpg";
-
+import { IoIosArrowDown } from "react-icons/io";
 const About_us = () => {
   return (
     <>
@@ -43,30 +43,17 @@ const About_us = () => {
                 </h2>
               </div>
               <div className="">
-                <div className="relative  overflow-hidden rounded-t-lg">
+                <div className="relative overflow-hidden rounded-t-lg">
                   <input
                     type="checkbox"
                     id="collapse-menu"
-                    className="peer absolute inset-x-0 top-0 z-10 h-12 w-full cursor-pointer appearance-none"
+                    className="peer absolute inset-x-0 top-0 z-10  h-12 w-full cursor-pointer appearance-none "
                   />
-                  <div className="flex h-12 w-full items-center bg-gray-500 p-3 text-white">
+                  <div className=" h-12 w-full  bg-gray-500 p-3 text-white">
                     <h1 className="font-semibold">Our Company Mission</h1>
                   </div>
-                  <div className="absolute right-4 top-3 rotate-0 transition-transform duration-500 peer-checked:rotate-180 peer-checked:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                      />
-                    </svg>
+                  <div className="absolute  right-4 top-3 rotate-0  transition-transform duration-500 peer-checked:rotate-180 peer-checked:text-white">
+                    <IoIosArrowDown className="text-2xl" />
                   </div>
                   <div className=" h-0 overflow-hidden bg-gray-300 transition duration-500  ease-in-out peer-checked:h-full ">
                     <div className="p-3">
@@ -85,24 +72,11 @@ const About_us = () => {
                     id="collapse-menu"
                     className="peer absolute inset-x-0 top-0 z-10 h-12 w-full cursor-pointer appearance-none"
                   />
-                  <div className="flex h-12 w-full items-center bg-gray-500 p-3">
+                  <div className="h-12 w-full items-center bg-gray-500 p-3">
                     <h1 className="font-semibold text-white">Our Promise</h1>
                   </div>
                   <div className="absolute right-4 top-3 rotate-0 transition-transform duration-500 peer-checked:rotate-180 peer-checked:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                      />
-                    </svg>
+                    <IoIosArrowDown className="text-2xl" />
                   </div>
                   <div className=" h-0 overflow-hidden bg-gray-300 transition duration-500  ease-in-out peer-checked:h-full ">
                     <div className="p-3">
@@ -119,26 +93,13 @@ const About_us = () => {
                     id="collapse-menu"
                     className="peer absolute inset-x-0 top-0 z-10 h-12 w-full cursor-pointer appearance-none"
                   />
-                  <div className="flex h-12 w-full items-center bg-gray-500 p-3">
+                  <div className=" h-12 w-full items-center bg-gray-500 p-3">
                     <h1 className="font-semibold text-white">Our Service</h1>
                   </div>
                   <div className="absolute right-4 top-3 rotate-0 transition-transform duration-500 peer-checked:rotate-180 peer-checked:text-white">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="h-6 w-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                      />
-                    </svg>
+                    <IoIosArrowDown className="text-2xl" />
                   </div>
-                  <div className=" h-0 overflow-hidden  bg-gray-300 transition duration-500  ease-in-out peer-checked:h-full ">
+                  <div className=" h-0 overflow-hidden bg-gray-300 transition duration-500  ease-in-out peer-checked:h-full ">
                     <div className="p-3 ">
                       <p className="indent-10">
                         Our goal is to provide financial consultancy to our

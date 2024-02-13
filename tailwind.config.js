@@ -17,7 +17,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        specialFont: "Protest Guerrilla",
+        poppins: "Poppins",
+        montserrat: "Montserrat",
       },
     },
   },

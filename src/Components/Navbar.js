@@ -1,9 +1,14 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-lone-blocks */
-// import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-// import emailjs from "@emailjs/browser";
-import { colors } from "../constants/colors";
+import main_logo from "../assets/2.png";
+import { TfiMenu } from "react-icons/tfi";
+import { Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 const Navbar = () => {
   const toggleMenu = () => {
@@ -15,324 +20,316 @@ const Navbar = () => {
       menu.classList.add("hidden");
     }
   };
-  // const form = useRef();
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
 
-  //   emailjs
-  //     .sendForm(
-  //       "service_qlg3roy",
-  //       "template_4eaqnun",
-  //       form.current,
-  //       "rdd5jVCHkgsR0vRu3",
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       },
-  //     );
-  //   e.target.reset();
-  // };
   return (
-    <>
-      <nav className="sticky top-0 z-50 border-b-2 bg-slate-300">
-        <div className="container mx-auto items-center p-3 lg:flex lg:rounded-t-xl ">
-          <div className="flex">
-            <Link to="/">Comapany Logo</Link>
-
-            <button
-              onClick={toggleMenu}
-              className="ml-auto rounded-md hover:bg-green-300 lg:hidden "
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="h-6 w-6 "
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </button>
-          </div>
-
-          {/*<-------------Nav-List--------------------->  */}
-          <div
-            id="mobileMenu"
-            className="ml-auto mt-5 hidden lg:mt-0 lg:block "
+    <nav className="sticky top-0 z-50 border-b-2 bg-gradient-to-l from-[#EF2670] via-rose-400   to-pink-300 *:font-montserrat *:transition-all *:duration-500">
+      <div className="mx-auto  my-auto w-[94%]  items-center p-3 xl:flex  ">
+        <div className="flex items-center ">
+          {/* ----------Logo Section---------> */}
+          <Link className="flex items-center " to="/">
+            <img className="h-16 w-16" src={main_logo} alt="main-logo" />
+            <span className="font-poppins text-2xl font-semibold text-white">
+              Finnacle
+            </span>
+          </Link>
+          {/*----------------- Menu Icon--------------- */}
+          <button
+            onClick={toggleMenu}
+            className="ml-auto mr-4  hover:text-white xl:hidden "
           >
-            <ul className="rounded-lg lg:flex lg:flex-1 lg:rounded ">
-              {/* <---Group the parent element> */}
-              <li className=" transistion group relative  rounded px-4 py-2 hover:bg-slate-400  ">
-                <a className="group-hover:text-slate-50" href="#">
-                  Loans For You
-                </a>
-                {/* <---Hover Group the children element--------> */}
-                <ul className="left-0 top-9 w-full rounded text-left group-hover:block lg:absolute lg:hidden lg:w-max lg:bg-slate-400">
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <Link to="/personal-loan">Personal Loans</Link>
-                  </li>
-                  <li className="px-4  py-1 hover:bg-slate-300">
-                    <a href="#">Business Loans</a>
-                  </li>
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <a href="#">MSME Loans</a>
-                  </li>
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <a href="#">Commercial Property Loans</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="rounded px-4 py-2 hover:bg-slate-500 ">
-                <a className="hover:text-white" href="#">
-                  Business We Serve
-                </a>
-              </li>
-              <li className="group relative rounded px-4 py-2 hover:bg-slate-400 ">
-                <a className="group-hover:text-slate-50" href="#">
-                  Our Story
-                </a>
-                <ul className="left-0 top-9 rounded text-left group-hover:block lg:absolute lg:hidden lg:w-40 lg:bg-slate-400">
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <Link to="/about-us">About us</Link>
-                  </li>
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <a href="#">Our values</a>
-                  </li>
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <a href="#">Our Teams</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="rounded px-4 py-2 hover:bg-slate-500  ">
-                <a className="hover:text-white" href="#">
-                  Locate Us
-                </a>
-              </li>
-              <li className="group relative rounded px-4 py-2 hover:bg-slate-400   ">
-                <a className="group-hover:text-slate-50" href="#">
-                  Explore
-                </a>
-                <ul className="left-0 top-9 rounded text-left group-hover:block lg:absolute lg:hidden lg:w-40 lg:bg-slate-400">
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <a href="#">Calculator</a>
-                  </li>
-                  <li className="px-4 py-1 hover:bg-slate-300">
-                    <a href="#">Blogs</a>
-                  </li>
-                  <li className="px-4 py-1 hover:bg-slate-300" s>
-                    <a href="#">FAQs</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="rounded px-4 py-2 hover:bg-slate-500 ">
-                <a className="hover:text-white" href="#">
-                  Carrers
-                </a>
-              </li>
-              <li
-                style={{ color: colors.gradientOne }}
-                className="group relative ml-2 inline-block rounded border border-black bg-green-100 px-4 py-2 hover:bg-green-400 hover:text-white   "
-              >
-                <Link to="/enquiry-form">Enquiry</Link>
-
-                {/* <ul className="absolute hidden h-screen w-96 -translate-x-72 translate-y-3 animate-sliding-up  overflow-scroll  bg-purple-300 group-hover:block">
-                  <form
-                    action=""
-                    ref={form}
-                    onSubmit={sendEmail}
-                    className="p-3"
-                  >
-                    <div className="mb-1 flex flex-col">
-                      <label htmlFor="name" className="font-semibold">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        name="user_name"
-                        id="name"
-                        className=" w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
-                        placeholder=" Full Name"
-                        required
-                      />
-                    </div>
-                    <div className="mb-1 flex flex-col">
-                      <label htmlFor="num" className="font-semibold">
-                        Mobile Number
-                      </label>
-                      <input
-                        type="tel"
-                        name="user_number"
-                        id="num"
-                        className="w-1/2 rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
-                        placeholder="10 Digit Number"
-                        required
-                        maxLength={10}
-                      />
-                    </div>
-                    <div className="mb-1 flex flex-col">
-                      <label htmlFor="mail" className="font-semibold">
-                        Email Id
-                      </label>
-                      <input
-                        type="email"
-                        name="user_email"
-                        id="mail"
-                        className="w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
-                        placeholder="Email Id"
-                        required
-                      />
-                    </div>
-                    <div className="mb-1 flex flex-col">
-                      <label htmlFor="city" className="font-semibold">
-                        City
-                      </label>
-                      <input
-                        type="text"
-                        name="user_cityname"
-                        id="city"
-                        className="w-1/2 rounded border p-2  focus:outline-none focus:ring focus:ring-purple-500"
-                        placeholder="City Name"
-                        required
-                      />
-                    </div>
-                    <div className="mb-1 flex flex-col">
-                      <label htmlFor="pin" className="font-semibold">
-                        Pin Code
-                      </label>
-                      <input
-                        type="text"
-                        name="user_pincode"
-                        id="pin"
-                        className="w-1/2 rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
-                        placeholder=" Pincode"
-                        maxLength={6}
-                        required
-                      />
-                    </div>
-                    <div className="mb-1 flex flex-col">
-                      <label htmlFor="emp type" className="font-semibold">
-                        Employment Type
-                      </label>
-                      <select
-                        name="user_emType"
-                        id="emp type"
-                        className="rounded border p-2 focus:outline-none focus:ring focus:ring-purple-500"
-                      >
-                        <option
-                          value="Select Employment Type"
-                          selected
-                          required
-                        >
-                          Select Employment Type
-                        </option>
-                        <option value="Salaried">Salaried</option>
-                        <option value="Self-Employee">Self-Employed</option>
-                      </select>
-                    </div>
-                    <div className="mb-1 flex flex-col">
-                      <label htmlFor="address" className="font-semibold">
-                        Your Address :
-                      </label>
-                      <textarea
-                        name="user_address"
-                        id="address"
-                        cols="20"
-                        rows="5"
-                        className="w-8/12 rounded  p-3  focus:outline-none focus:ring focus:ring-purple-500"
-                        placeholder="Contact Address"
-                        required
-                      ></textarea>
-                    </div>
-                    <div>
-                      <button
-                        type="submit"
-                        className=" rounded-md border bg-purple-700 p-2 font-semibold text-white hover:bg-purple-500 focus:outline-none focus:ring focus:ring-purple-500"
-                      >
-                        Request to Contact
-                      </button>
-                    </div>
-                  </form>
-                </ul> */}
-              </li>
-            </ul>
-          </div>
+            <TfiMenu className="text-2xl" />
+          </button>
         </div>
-      </nav>
-    </>
+
+        {/*<-------------Nav-List--------------------->  */}
+        <div
+          id="mobileMenu"
+          className="ml-auto mt-5 hidden border-t-[1px] xl:mt-0 xl:block xl:border-none"
+        >
+          <ul className="*:transistion-all my-auto flex h-fit flex-col items-center gap-4  space-y-2 font-medium tracking-wide *:cursor-pointer *:whitespace-nowrap *:text-lg  *:text-white *:duration-500  xl:flex-row xl:space-y-0 xl:tracking-wider ">
+            <li className="mt-2 xl:mt-0 ">
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <Menu.Button className="inline-flex w-full items-center justify-center gap-x-1  px-3 py-2  font-semibold text-white hover:opacity-50 ">
+                    Loans for you
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-6 w-6"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Menu.Button>
+                </div>
+
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="absolute -left-16 z-10 mt-2 w-max origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none xl:left-0">
+                    <div className="py-1">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            to="/personal-loan"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            Personal Loans
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            Business Loans
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    <div className="py-1">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            MSME Loans
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            Commercial Property Loans
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+            </li>
+            <li>
+              <a className="hover:opacity-50">Business We Serve</a>
+            </li>
+            <li>
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <Menu.Button className="inline-flex w-full items-center justify-center gap-x-1  px-3 py-2  font-semibold text-white hover:opacity-50 ">
+                    Our Story
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-6 w-6"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Menu.Button>
+                </div>
+
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="absolute -left-12 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none xl:left-0">
+                    <div className="py-1">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link
+                            to="/about-us"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            About Us
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            Our values
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    <div className="py-1">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            Our Teams
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+            </li>
+
+            <li>
+              <Menu as="div" className="relative inline-block text-left">
+                <div>
+                  <Menu.Button className="inline-flex w-full items-center justify-center gap-x-1  px-3 py-2  font-semibold text-white hover:opacity-50 ">
+                    Explore
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-6 w-6"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Menu.Button>
+                </div>
+
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-100"
+                  enterFrom="transform opacity-0 scale-95"
+                  enterTo="transform opacity-100 scale-100"
+                  leave="transition ease-in duration-75"
+                  leaveFrom="transform opacity-100 scale-100"
+                  leaveTo="transform opacity-0 scale-95"
+                >
+                  <Menu.Items className="absolute -left-12 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none xl:left-0">
+                    <div className="py-1">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            Calculator
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            FAQ
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                    <div className="py-1">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(
+                              active
+                                ? "bg-[#EF2670] text-white"
+                                : "text-[#2B75BC]",
+                              "text-md block px-4 py-2",
+                            )}
+                          >
+                            Blog
+                          </a>
+                        )}
+                      </Menu.Item>
+                    </div>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+            </li>
+            <li>
+              <a className="hover:opacity-50" href="#">
+                Careers
+              </a>
+            </li>
+            <li className="inline-block cursor-pointer rounded-full border  bg-[#2B75BC] px-7  py-2  hover:bg-[#EF2670]  xl:mt-0 ">
+              <Link className=" text-white" to="/enquiry-form">
+                Enquiry
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 
 export default Navbar;
-// eslint-disable-next-line no-lone-blocks
-{
-  /* <---------------Mobile Menu--------------> */
-}
-{
-  /* <div id="mobileMenu" className="bg-slate-400 ">
-          <ul className=" lg:hidden flex flex-col  ">
-            <li className="px-4 py-3 relative group">
-              <a className="  " href="#">
-                Loans For You
-              </a>
-              <ul className="absolute group-hover:">
-                <li>
-                  <a href="#">Personal Loans</a>
-                </li>
-                <li>
-                  <a href="#">Business Loans</a>
-                </li>
-                <li>
-                  <a href="#">MSME Loans</a>
-                </li>
-                <li>
-                  <a href="#">Commercial Property Loans</a>
-                </li>
-              </ul>
-            </li>
-            <li className="px-4 py-3">
-              <a href="#">Business We Serve</a>
-            </li>
-            <li className="px-4 py-3">
-              <a href="#">Our Story</a>
-              <ul>
-                    <li>
-                      <a href="#">About us</a>
-                    </li>
-                    <li>
-                      <a href="#">Our values</a>
-                    </li>
-                    <li>
-                      <a href="#">Our Teams</a>
-                    </li>
-                  </ul>
-            </li>
-            <li className="px-4 py-3">
-              <a href="#">Locate Us</a>
-            </li>
-            <li className="px-4 py-3">
-              <a href="#">Explore</a>
-              <ul>
-                    <li>
-                      <a href="#">Calculator</a>
-                    </li>
-                    <li>
-                      <a href="#">Blogs</a>
-                    </li>
-                    <li>
-                      <a href="#">FAQs</a>
-                    </li>
-                  </ul>
-            </li>
-            <li className="px-4 py-3">
-              <a href="#">Carrers</a>
-            </li>
-          </ul>
-        </div> */
-}
