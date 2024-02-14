@@ -11,5 +11,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.wrappingStrategy": "simple",
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "diffEditor.experimental.showMoves": true
 }

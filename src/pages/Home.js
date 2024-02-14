@@ -16,12 +16,13 @@ import {
   faPaste,
   faHandHoldingDollar,
 } from "@fortawesome/free-solid-svg-icons";
+import PartnerSection from "../components/PartnerSection";
 // import Enquiry_Form from "./Enquiry_Form";
 
 const Home = () => {
   return (
     <>
-      <main className=" font-serif">
+      <main className=" *:font-montserrat">
         <Navbar />
         <section className="bg-gradient-to-l from-[#EF2670] via-rose-400   to-pink-300 px-5 py-8 lg:px-0 lg:py-16">
           <div className="container mx-auto flex  p-3">
@@ -101,18 +102,8 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="border border-black bg-slate-300">
-          <div className="container mx-auto flex  justify-between">
-            <div className="">
-              <h1>EMI Calculator</h1>
-            </div>
-            <div className="">
-              <h1>
-                Request for free <br />
-                call back
-              </h1>
-            </div>
-          </div>
+        <section className="  bg-white p-5">
+          <PartnerSection />
         </section>
 
         <section className="bg-slate-300 px-6 py-10 lg:px-0 lg:py-20">
