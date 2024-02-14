@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 border-b-2 bg-gradient-to-l from-[#EF2670] via-rose-400   to-pink-300 *:font-montserrat *:transition-all *:duration-500">
+    <nav className="sticky top-0 z-50 border-b-[1px] bg-gradient-to-l from-[#EF2670] via-rose-400   to-pink-300 *:font-montserrat *:transition-all *:duration-500">
       <div className="mx-auto  my-auto w-[94%]  items-center p-3 xl:flex  ">
         <div className="flex items-center ">
           {/* ----------Logo Section---------> */}
@@ -95,8 +95,8 @@ const Navbar = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/business-loans"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -105,15 +105,15 @@ const Navbar = () => {
                             )}
                           >
                             Business Loans
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/msme-loans"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -122,13 +122,13 @@ const Navbar = () => {
                             )}
                           >
                             MSME Loans
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/commercial-property-loans"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -137,7 +137,7 @@ const Navbar = () => {
                             )}
                           >
                             Commercial Property Loans
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
@@ -146,7 +146,9 @@ const Navbar = () => {
               </Menu>
             </li>
             <li>
-              <a className="hover:opacity-50">Business We Serve</a>
+              <Link to="/business-we-serve" className="hover:opacity-50">
+                Business We Serve
+              </Link>
             </li>
             <li>
               <Menu as="div" className="relative inline-block text-left">
@@ -196,8 +198,8 @@ const Navbar = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/our-values"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -206,15 +208,15 @@ const Navbar = () => {
                             )}
                           >
                             Our values
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/our-teams"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -223,7 +225,7 @@ const Navbar = () => {
                             )}
                           >
                             Our Teams
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
@@ -265,8 +267,8 @@ const Navbar = () => {
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/calculator"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -275,13 +277,13 @@ const Navbar = () => {
                             )}
                           >
                             Calculator
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/faq"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -290,15 +292,15 @@ const Navbar = () => {
                             )}
                           >
                             FAQ
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
                     <div className="py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/blog"
                             className={classNames(
                               active
                                 ? "bg-[#EF2670] text-white"
@@ -307,7 +309,7 @@ const Navbar = () => {
                             )}
                           >
                             Blog
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
@@ -316,9 +318,9 @@ const Navbar = () => {
               </Menu>
             </li>
             <li>
-              <a className="hover:opacity-50" href="#">
+              <Link to="/career" className="hover:opacity-50" href="#">
                 Careers
-              </a>
+              </Link>
             </li>
             <li className="inline-block cursor-pointer rounded-full border  bg-[#2B75BC] px-7  py-2  hover:bg-[#EF2670]  xl:mt-0 ">
               <Link className=" text-white" to="/enquiry-form">

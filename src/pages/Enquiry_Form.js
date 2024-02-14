@@ -12,6 +12,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import emailjs from "@emailjs/browser";
+import Navbar from "../components/Navbar";
 
 const Enquiry_Form = () => {
   const form = useRef();
@@ -40,17 +41,20 @@ const Enquiry_Form = () => {
 
   return (
     <div style={{ backgroundColor: colors.logoPink }}>
+      <Navbar />
       <section className="container mx-auto  gap-4 p-4 md:flex  lg:py-14 ">
         <div className="  text-center  md:w-1/2 md:text-left">
-          <Link to="/" className="flex justify-center md:block">
+          {/* <Link to="/" className="flex justify-center md:block">
             <img
               src={logo}
               className=" h-24 w-24  lg:h-28 lg:w-28  "
               alt="logo"
             />
-          </Link>
+          </Link> */}
 
-          <p className="font-mono text-lg text-white lg:text-4xl">{para}</p>
+          <p className="font-mono text-lg text-white lg:py-5 lg:text-4xl">
+            {para}
+          </p>
           <div className="lg:mt-[520px]">
             <Link>
               <FontAwesomeIcon
@@ -97,7 +101,7 @@ const Enquiry_Form = () => {
                 type="text"
                 name="user_name"
                 id="name"
-                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring-2  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder=" Full Name"
                 required
               />
@@ -113,7 +117,7 @@ const Enquiry_Form = () => {
                 type="tel"
                 name="user_number"
                 id="num"
-                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring-2  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder="10 Digit Number"
                 required
                 minLength={10}
@@ -131,7 +135,7 @@ const Enquiry_Form = () => {
                 type="email"
                 name="user_email"
                 id="mail"
-                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring-2  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder="Email Id"
                 required
               />
@@ -148,7 +152,7 @@ const Enquiry_Form = () => {
                 type="text"
                 name="user_pincode"
                 id="pin"
-                className=" mb-2 w-11/12  rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
+                className=" mb-2 w-11/12  rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring-2  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder=" Pincode"
                 maxLength={6}
                 required
@@ -164,7 +168,7 @@ const Enquiry_Form = () => {
               <select
                 name="loan-type"
                 id="user-loan-type"
-                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:text-black focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
+                className="mb-2 w-11/12 rounded border-b border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:text-black focus:ring-2  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
               >
                 <option value=" Select Loan type" selected required>
                   Select Loan type
@@ -188,7 +192,7 @@ const Enquiry_Form = () => {
                 id="address"
                 cols="20"
                 rows="5"
-                className=" mb-3 w-11/12 rounded-lg border border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
+                className=" mb-3 w-11/12 rounded-lg border border-gray-400 bg-transparent p-2 text-lg outline-none focus:border-none focus:ring-2  focus:ring-[#EF2670] lg:w-8/12 lg:text-xl"
                 placeholder="Contact Address"
                 required
               ></textarea>

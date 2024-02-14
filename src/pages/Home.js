@@ -21,9 +21,9 @@ import {
 const Home = () => {
   return (
     <>
-      <section className="font-serif">
+      <main className=" font-serif">
         <Navbar />
-        <section className="bg-slate-300 px-5 py-8 lg:px-0 lg:py-16">
+        <section className="bg-gradient-to-l from-[#EF2670] via-rose-400   to-pink-300 px-5 py-8 lg:px-0 lg:py-16">
           <div className="container mx-auto flex  p-3">
             <div className="hidden max-w-full object-cover lg:block ">
               <img className="h-full" src={stock} alt="Bank-Stock" />
@@ -220,7 +220,7 @@ const Home = () => {
           </div>
         </section>
         <Footer />
-      </section>
+      </main>
     </>
   );
 };
