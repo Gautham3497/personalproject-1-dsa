@@ -4,7 +4,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import loan from "../assets/Loan-Img.avif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
@@ -181,13 +180,7 @@ const Home = () => {
           <div className="container mx-auto">
             <h2 className="text-center text-xl font-bold">WHY US</h2>
             <div className="flex flex-col p-5 lg:flex-row">
-              <div className="object-cover sm:hidden lg:block">
-                <img
-                  className=" h-full max-w-full"
-                  src={loan}
-                  alt="Loan Image"
-                />
-              </div>
+              <div className="object-cover sm:hidden lg:block"></div>
               <div className="w-full bg-green-200 p-5  text-justify  ">
                 <p className="indent-10 ">
                   At Real Value, we have kept in pace with our ever-increasing
