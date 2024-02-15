@@ -1,30 +1,10 @@
 import React from "react";
-import { images } from "../constants/image.js";
+import { bankImages } from "../constants/images.js";
 
 const PartnerSection = () => {
-  const partnerList = [
-    images.ic_aditya,
-    images.ic_axis,
-    images.ic_axisFinance,
-    images.ic_bajaj,
-    images.ic_finnable,
-    images.ic_fullerton,
-    images.ic_hdfc,
-    images.ic_heroFin,
-    images.ic_icici,
-    images.ic_idfc,
-    images.ic_incred,
-    images.ic_indus,
-    images.ic_kotak,
-    images.ic_poonawalla,
-    images.ic_standardChartered,
-    images.ic_tata,
-    images.ic_ujjivan,
-    images.ic_yes,
-  ];
   return (
-    <div className="grid-col-6 grid grid-flow-row">
-      {partnerList.map((image) => (
+    <div className=" grid-col-2 grid items-center  gap-6 px-5 py-8 md:grid-cols-3 lg:grid-cols-5">
+      {bankImages.map((image) => (
         <img src={image} alt="partnerLogo"></img>
       ))}
     </div>

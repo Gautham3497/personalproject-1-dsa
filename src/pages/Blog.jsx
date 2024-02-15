@@ -3,11 +3,9 @@ import Navbar from "../components/Navbar";
 
 const Blog = () => {
   return (
-    <div>
+    <div className="bg-white text-center text-4xl">
       <Navbar />
-      <section className="h-screen w-full bg-[#EF2670] text-center text-3xl text-white">
-        Blog
-      </section>
+      Blog
     </div>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -11,7 +12,7 @@ import {
   faTags,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Personal_Loan = () => {
+const PersonalLoan = () => {
   return (
     <>
       <section>
@@ -300,4 +301,4 @@ const Personal_Loan = () => {
   );
 };
 
-export default Personal_Loan;
+export default PersonalLoan;

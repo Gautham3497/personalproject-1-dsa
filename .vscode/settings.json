@@ -12,5 +12,9 @@
   "editor.formatOnPaste": true,
   "editor.wrappingStrategy": "simple",
   "editor.wordWrap": "on",
-  "diffEditor.experimental.showMoves": true
+  "diffEditor.experimental.showMoves": true,
+  "html.completion.attributeDefaultValue": "empty",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "double",
+  "markdown.preview.typographer": true
 }
