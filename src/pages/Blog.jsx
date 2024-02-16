@@ -5,7 +5,8 @@ const Blog = () => {
   return (
     <div className="bg-white text-center text-4xl">
       <Navbar />
-      Blog
+      <h1>Latest Events</h1>
+      <div></div>
     </div>
   );
 };

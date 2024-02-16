@@ -13,8 +13,11 @@
   "editor.wrappingStrategy": "simple",
   "editor.wordWrap": "on",
   "diffEditor.experimental.showMoves": true,
-  "html.completion.attributeDefaultValue": "empty",
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "double",
-  "markdown.preview.typographer": true
+  "html.completion.attributeDefaultValue": "singlequotes",
+  "javascript.preferences.quoteStyle": "auto",
+  "typescript.preferences.quoteStyle": "auto",
+  "markdown.preview.typographer": false,
+  "prettier.quoteProps": "as-needed",
+  "prettier.embeddedLanguageFormatting": "auto",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

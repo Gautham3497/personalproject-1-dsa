@@ -16,6 +16,7 @@ import CreditCard from "./pages/CreditCard";
 import HomeLoan from "./pages/HomeLoan";
 import PreOwnedCarLoan from "./pages/PreOwnedCarLoan";
 import MortgageLoan from "./pages/MortgageLoan";
+import SubProductPage from "./pages/SubProductPage";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/mortgage-loan" element={<MortgageLoan />} />
         <Route path="/personal-loan" element={<PersonalLoan />} />
         <Route path="/car-loan" element={<PreOwnedCarLoan />} />
+        <Route path="/sub-product-page" element={<SubProductPage />} />
       </Routes>
     </div>
   );
